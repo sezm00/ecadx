@@ -1,15 +1,35 @@
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .x-container {
     display: flex;
     align-items: center;
-    gap: 20px;
-  }
-  
+    justify-content: center;
+    transform: translateY(-16%);
+    margin-bottom: 100px;
+    color: #fff;
+}
+.x-container img{
+    width: 20.02vw;
+}
   .x-container.reverse {
     flex-direction: row-reverse;
-  }
+    transform: translateY(-20%);
+    gap: 0px;
+}
   
-  .logo img {
-    max-width: 100%;
+.logo img {
+    max-width: 35.15vw;
     height: auto;
-  }
-  
+}
+.typed-logo img{
+    max-width: 41.15vw;
+    height: auto;
+}
+
+.ecadx-container{
+    display: flex;
+    justify-content: center;
+}

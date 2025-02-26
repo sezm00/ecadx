@@ -1,10 +1,14 @@
 *{
   margin: 0;
 }
+.bg{
+  width: 100%;
+  background: #000;
+}
 .svg-container {
   background: #000;
   width: 90%;
-  height: 100%; 
+  height: fit-content;
   position: relative;
   top: 0;
   left: 60%;

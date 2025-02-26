@@ -17,9 +17,13 @@ function App() {
   }, []);
 
   return (
-    <div className={isMobile ? "mobile-container" : "desktop-container"}>
-      {/* <SVG /> */}
-      <MainContent/>
+    <div className="parent">
+        <div className={isMobile ? "mobile-container" : "desktop-container"}>
+        <SVG />
+      </div>
+      <div className="content">
+        <MainContent/>
+      </div>
     </div>
   );
 }
