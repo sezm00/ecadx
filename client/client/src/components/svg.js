@@ -81,8 +81,6 @@ const SVG = () => {
                     </defs>
                 </svg>
             </Container>
-
-       
         </div>
 
     );
