@@ -1,12 +1,30 @@
 import React from "react";
 import {Container} from "react-bootstrap";
 import "../style/main.css";
+import { useState, useEffect } from "react";
 
-const SVG = () => {
-    return(
-        <div className="svg-container">
-            <Container>
-                <svg width="100%" height="100%" viewBox="0 0 1105 1929"  xmlns="http://www.w3.org/2000/svg">
+function SVG() {
+  const [svgHeight, setSvgHeight] = useState(getHeight());
+
+  function getHeight() {
+    if (window.innerWidth < 768) return "100%";
+    if (window.innerWidth < 1024) return "100%";
+    return "100%";
+  }
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSvgHeight(getHeight());
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <div className="svg-container">
+            <Container fluid>
+                <svg width="100%" height={svgHeight} viewBox="0 0 1105 1929"  xmlns="http://www.w3.org/2000/svg">
                     <line x1="1100" y1="1929" x2="1100" y2="1763" stroke="url(#paint0_linear_253_2)" stroke-width="10"/>
                     <line x1="5" y1="543" x2="5" y2="160" stroke="url(#paint1_linear_253_2)" stroke-width="10"/>
                     <rect x="503.802" y="658.803" width="67.4797" height="67.4797" transform="rotate(-45 503.802 658.803)" stroke="#F2E527" stroke-width="5"/>
@@ -82,9 +100,7 @@ const SVG = () => {
                 </svg>
             </Container>
         </div>
-
-    );
-    
-};
+  );
+}
 
 export default SVG;

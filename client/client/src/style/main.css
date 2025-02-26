@@ -1,12 +1,36 @@
+*{
+  margin: 0;
+}
 .svg-container {
-    background: #000;
-    width: 90%;
-    height: 100%;
-    position: relative;
-    top: 0;
-    left: 60%;
-    transform: translateX(-60%);
-    align-items: center;
-    justify-content: center;
+  background: #000;
+  width: 90%;
+  height: 100%; 
+  position: relative;
+  top: 0;
+  left: 60%;
+  transform: translateX(-60%);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  *{
+    margin: 0;
   }
-  
+  .svg-container {
+    top:0;
+    height: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  *{
+    margin: 0;
+  }
+  .svg-container {
+    top: 0;
+    height: 100%;
+  }
+}
