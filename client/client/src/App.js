@@ -1,4 +1,5 @@
 import SVG from "./components/svg";
+import MainContent from "./components/MainContent";
 import { Container } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import './App.css';
@@ -17,7 +18,8 @@ function App() {
 
   return (
     <div className={isMobile ? "mobile-container" : "desktop-container"}>
-      <SVG />
+      {/* <SVG /> */}
+      <MainContent/>
     </div>
   );
 }

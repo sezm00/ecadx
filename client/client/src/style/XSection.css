@@ -1,0 +1,15 @@
+.x-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .x-container.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+  
