@@ -1,77 +1,12 @@
-
-.ibm-plex-sans{
-    font-family: "IBM Plex Sans", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:"wdth" 100;
-}
-*{
-    margin: 0;
-    font-family: "IBM Plex Sans", serif;
-}
-body {
-    background-color: #000000;
-}
-
-.parent-container-landing {
+.svg-container {
+    background: #000;
+    width: 90%;
+    height: 100%;
     position: relative;
-    justify-content: center;
-}
-
-.line-container {
-    position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    z-index: 1;
-    display: flex;
+    left: 60%;
+    transform: translateX(-60%);
     align-items: center;
     justify-content: center;
-}
-
-.main-content {
-    position: absolute;
-    margin: 0;
-    margin-top: 0px;
-    padding-top: 8%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.intro-text h1,
-.intro-text p {
-    color: #f1f1f1;
-}
-
-.main-content img {
-    height: 230px;
-}
-
-.ecadx-container {
-    margin-top: -20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-.ecadx-container img{
-    width: 450px;
-    height: auto;
-}
-.ecadx-container .typed-logo{
-    margin-top: 40px;
-    margin-left: -40px;
-    margin-right: 150px;
-}
-.ecadx-container .logo{
-    margin-top: -20px;
-    padding-left: 30px;
-    justify-content: center;
-    align-content: center;
-}
+  }
+  
