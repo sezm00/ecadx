@@ -1,35 +1,77 @@
-.main-content{
+.main-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
+
 .x-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(-16%);
-    margin-bottom: 100px;
+    transform: translateY(-26%);
+    gap: 18vw; /* Adjusted for responsiveness */
+    margin-bottom: 13vh; /* Adjusted for responsiveness */
     color: #fff;
 }
-.x-container img{
-    width: 20.02vw;
+
+.x-container img {
+    width: 20vw; /* Keeps image proportional */
+    max-width: 300px; /* Prevents it from getting too large on big screens */
 }
-  .x-container.reverse {
+
+.x-container.reverse {
     flex-direction: row-reverse;
     transform: translateY(-20%);
-    gap: 0px;
+    margin-left: 0;
+    gap: 18vw; /* Matches the non-reverse section */
 }
-  
+
 .logo img {
-    max-width: 35.15vw;
-    height: auto;
-}
-.typed-logo img{
-    max-width: 41.15vw;
+    max-width: 35vw;
     height: auto;
 }
 
-.ecadx-container{
+.typed-logo img {
+    max-width: 41vw;
+    height: auto;
+}
+
+.ecadx-container {
+    gap: 5vw;
     display: flex;
     justify-content: center;
 }
+
+.intro-text {
+    font-size: 1rem;
+    margin-left: 0;
+}
+
+.x-container:not(.reverse) .intro-text {
+    margin-left: 4vw; /* Adjusted to scale with screen width */
+    padding-left: 1vw;
+}
+
+/* Media Queries for Smaller Screens
+@media (max-width: 1024px) {
+    .x-container {
+        flex-direction: column;
+        transform: translateY(0);
+        gap: 5vh;
+    }
+
+    .x-container.reverse {
+        flex-direction: column-reverse;
+    }
+
+    .x-container img {
+        width: 40vw; 
+    }
+
+    .intro-text {
+        text-align: center;
+        margin-left: 0;
+        padding-left: 0;
+    }
+} */
