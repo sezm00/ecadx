@@ -1,5 +1,6 @@
 .main-content {
     display: flex;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -10,21 +11,21 @@
     align-items: center;
     justify-content: center;
     transform: translateY(-26%);
-    gap: 18vw; /* Adjusted for responsiveness */
-    margin-bottom: 13vh; /* Adjusted for responsiveness */
+    gap: 18vw; 
+    margin-bottom: 13vh; 
     color: #fff;
 }
 
 .x-container img {
-    width: 20vw; /* Keeps image proportional */
-    max-width: 300px; /* Prevents it from getting too large on big screens */
+    width: 20vw; 
+    max-width: 300px; 
 }
 
 .x-container.reverse {
     flex-direction: row-reverse;
     transform: translateY(-20%);
     margin-left: 0;
-    gap: 18vw; /* Matches the non-reverse section */
+    gap: 18vw; 
 }
 
 .logo img {
@@ -49,29 +50,76 @@
 }
 
 .x-container:not(.reverse) .intro-text {
-    margin-left: 4vw; /* Adjusted to scale with screen width */
+    margin-left: 4vw;
     padding-left: 1vw;
 }
-
-/* Media Queries for Smaller Screens
-@media (max-width: 1024px) {
+@media (max-width: 1024px){
     .x-container {
-        flex-direction: column;
-        transform: translateY(0);
-        gap: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-20%);
+        gap: 18vw; 
+        margin-bottom: 12vh; 
+        color: #fff;
     }
 
-    .x-container.reverse {
-        flex-direction: column-reverse;
+}
+@media (max-width: 768px){
+    .ecadx-container {
+        gap: 5vw;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        /* transform: translateY(7%); */
     }
+    .main-content {
+        /* height: 100vh; */
+        display: flex;
+        width: 90%;
+        height: 100vh;
+        position: relative;
+        top: 0;
+        /* left: 60%;
+        transform: translateX(-60%); */
+        align-items: center;
+        justify-content: center; 
 
+    }
+    .x-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* transform: translateY(-8%); */
+        /* gap: 8vw;  */
+        /* margin-left: 20vw; */
+        margin-bottom: 3vh; 
+        color: #fff;
+    }
     .x-container img {
-        width: 40vw; 
+        width: 20vw; 
+        max-width: 300px; 
+    }
+    .x-container.reverse {
+        flex-direction: row-reverse;
+        /* transform: translateY(-10%); */
+        margin-left: 0;
+        margin-right: 8vw;
+        gap: 8vw; 
     }
 
     .intro-text {
-        text-align: center;
-        margin-left: 0;
-        padding-left: 0;
+        font-size: 0.5rem;
+        /* margin-left: 8vw;  */
+        /* padding-left: 1vw; */
     }
-} */
+    .intro-text h1{
+        font-size: 0.75rem;
+    }
+    
+    .x-container:not(.reverse) .intro-text {
+        /* margin-left: 8vw;
+        padding-left: 8vw; */
+    }
+
+}
