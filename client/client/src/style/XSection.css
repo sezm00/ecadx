@@ -1,125 +1,131 @@
-.main-content {
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .main-content {
     display: flex;
-    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+    width: 100%;
+    padding: 2rem;
+    margin-top: 7rem;
+  }
 
-.x-container {
+  .x-all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+  }
+  .xcon{
+    margin-block: 30px;
+  }
+  .x-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(-26%);
-    gap: 18vw; 
-    margin-bottom: 13vh; 
+    gap: 20vw;
+    /* margin-bottom: 10vh; */
+    /* margin-block: ; */
     color: #fff;
-}
-
-.x-container img {
-    width: 20vw; 
-    max-width: 300px; 
-}
-
-.x-container.reverse {
+    flex-wrap: wrap;
+  }
+  
+  .x-container img {
+    width: 18vw;
+    max-width: 280px;
+  }
+  
+  .x-container.reverse {
     flex-direction: row-reverse;
-    transform: translateY(-20%);
-    margin-left: 0;
-    gap: 18vw; 
-}
-
+    gap: 20vw;
+  }
+  
 .logo img {
-    max-width: 35vw;
+    max-width: 30vw;
     height: auto;
 }
-
+  
 .typed-logo img {
-    max-width: 41vw;
+    max-width: 36vw;
     height: auto;
-}
-
+  }
 .ecadx-container {
-    gap: 5vw;
     display: flex;
     justify-content: center;
+    /* margin-block: 7%; */
+    padding-top: 20px;
+    margin-right: 4%;
+    gap: 13vw;
 }
-
+  
 .intro-text {
-    font-size: 1rem;
-    margin-left: 0;
-}
-
+    font-size: 1.2rem;
+    text-align: left;
+    max-width: 40vw;
+  }
+  
 .x-container:not(.reverse) .intro-text {
-    margin-left: 4vw;
-    padding-left: 1vw;
+    margin-left: 2rem;
 }
-@media (max-width: 1024px){
-    .x-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translateY(-20%);
-        gap: 18vw; 
-        margin-bottom: 12vh; 
-        color: #fff;
-    }
-
+#construction{
+  margin-top: 10px;
+  gap: 2vw;
 }
-@media (max-width: 768px){
-    .ecadx-container {
-        gap: 5vw;
-        display: flex;
-        justify-content: center;
-        /* align-items: center; */
-        /* transform: translateY(7%); */
-    }
-    .main-content {
-        /* height: 100vh; */
-        display: flex;
-        width: 90%;
-        height: 100vh;
-        position: relative;
-        top: 0;
-        /* left: 60%;
-        transform: translateX(-60%); */
-        align-items: center;
-        justify-content: center; 
+#academy{
+  margin-left: 8%;
+  margin-top: 6%;
+  /* gap:6vw; */
+}
 
-    }
+#finance{
+  margin-top: 6%;
+}
+#studios{
+  margin-top: 6%;
+  margin-left: 8%;
+}
+  /* Tablet screens (below 1024px) */
+  @media (max-width: 1024px) {
     .x-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* transform: translateY(-8%); */
-        /* gap: 8vw;  */
-        /* margin-left: 20vw; */
-        margin-bottom: 3vh; 
-        color: #fff;
+      gap: 6vw;
+      margin-bottom: 8vh;
+      flex-direction: column;
+      text-align: center;
     }
-    .x-container img {
-        width: 20vw; 
-        max-width: 300px; 
-    }
-    .x-container.reverse {
-        flex-direction: row-reverse;
-        /* transform: translateY(-10%); */
-        margin-left: 0;
-        margin-right: 8vw;
-        gap: 8vw; 
-    }
-
+  
     .intro-text {
-        font-size: 0.5rem;
-        /* margin-left: 8vw;  */
-        /* padding-left: 1vw; */
+      font-size: 1rem;
+      max-width: 60vw;
+      text-align: center;
+      margin-left: 0;
     }
-    .intro-text h1{
-        font-size: 0.75rem;
+  }
+  
+  /* Mobile screens (below 768px) */
+  @media (max-width: 768px) {
+    .x-container {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 8vw;
+      margin-bottom: 3vh;
     }
-    
-    .x-container:not(.reverse) .intro-text {
-        /* margin-left: 8vw;
-        padding-left: 8vw; */
+  
+    .x-container img {
+      width: 20vw;
+      max-width: 100px;
     }
-
-}
+  
+    .intro-text {
+      font-size: 0.5rem;
+      max-width: 30vw;
+    }
+  }
+  

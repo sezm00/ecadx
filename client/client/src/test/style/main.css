@@ -17,18 +17,6 @@
   justify-content: center;
 }
 
-.footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 20px; /* Added padding */
-  position: relative; /* Ensure it stays in the layout */
-  width: 100%;
-}
-
-
-
-
 /* Tablet */
 @media (max-width: 1024px) {
   *{
