@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import NavBar from './components/NavBar';
+import SlideShow from './components/slideshow';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className='parent'>
        <div className='nav'>
         <NavBar />
+        <SlideShow/>
       </div>
     </div>
    
