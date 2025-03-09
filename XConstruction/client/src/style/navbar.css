@@ -11,7 +11,7 @@
     height: fit-content;
     align-items: center;
     padding: 30px;
-    background-color: #f8f9fa;
+    background-color: None;
 }
 
 .logo {
@@ -30,7 +30,7 @@
 .menu-item {
     margin: 0 25px; 
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     font-weight: 500;
     transition: color 0.3s;
 }
