@@ -50,3 +50,11 @@
     height: 100%;
   }
 }
+
+@media (max-width: 480px) {
+  .footer{
+    font-size: 0.75rem;
+    padding: 1px;
+    height: fit-content;
+  }
+}

@@ -344,11 +344,58 @@
 }
 
 @media (max-width: 480px) {
+  .main-content{
+    padding: 0.5rem;
+    margin-top: 1.75rem;
+  }
+
+  .xcon{
+    margin-block: 25px;
+  }
+
   .x-container {
-    gap: 10vw;
+    gap: 25vw;
   }
   .x-container.reverse {
-    gap: 10vw;
+    gap: 25vw;
+  }
+
+  #construction{
+    /* margin-left: 10px; */
+    margin-top:0;
+    /* gap: 2vw; */
+  }
+
+  #academy{
+    /* margin-left: 3%; */
+    /* margin-top: 2%; */
+    /* gap:6vw; */
+  }
+
+  #finance{
+    /* margin-top: 4%; */
+    margin-bottom: 7%;
+  }
+
+  #studios{
+    margin-top: 1%;
+    /* margin-left: 2%; */
+  }
+
+  #construction h1,
+  #academy h1,
+  #finance h1,
+  #studios h1{
+    font-size: 0.75rem;
+  }
+
+  #construction p,
+  #academy p,
+  #finance p,
+  #studios p{
+    font-size: 0.5rem;
+    margin-left: 0.3rem;
+    margin-top: 0.3rem;
   }
 }
 
