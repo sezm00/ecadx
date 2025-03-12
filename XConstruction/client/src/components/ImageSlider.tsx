@@ -53,7 +53,7 @@ export function ImageSlider({ images }: ImageSliderProps) {
         style={{ left: 0 }}
         aria-label="View Previous Image"
       >
-        <ArrowBigLeft aria-hidden />
+        NEXT
       </button>
       <button
         onClick={showNextImage}
@@ -61,7 +61,7 @@ export function ImageSlider({ images }: ImageSliderProps) {
         style={{ right: 0 }}
         aria-label="View Next Image"
       >
-        <ArrowBigRight aria-hidden />
+        Prev
       </button>
       <div
         style={{

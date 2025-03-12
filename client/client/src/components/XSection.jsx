@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import "../style/XSection.css"; 
 
-const XSection = ({ title, text, imgSrc, reverse }) => {
+export default function XSection({ title, text, imgSrc, reverse }) {
   return (
     <Container fluid>
         <div className={`x-container ${reverse ? "reverse" : ""}`}>
@@ -17,5 +17,3 @@ const XSection = ({ title, text, imgSrc, reverse }) => {
     </Container>
   );
 };
-
-export default XSection;

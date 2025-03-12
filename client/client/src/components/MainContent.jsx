@@ -2,7 +2,7 @@ import React from "react";
 import "../style/XSection.css"
 import XSection from "./XSection";
 
-function MainContent() {
+export default function MainContent() {
   return (
     <div className="main-content">
       <div className="ecadx-container">
@@ -19,9 +19,9 @@ function MainContent() {
             title="XConstruction" 
             text={
               <>
-                Lorem ipsum odor amet, consectetuer adipiscing elit.
+                Lorem ipsum odor amet,<br/> consectetuer adipiscing elit.
                 <br />
-                Neque etiam leo egestas finibus mollis pharetra.
+                Neque etiam leo egestas<br/> finibus mollis pharetra.
               </>
             } 
             imgSrc="./img/Asset 82@300x.png" 
@@ -33,9 +33,9 @@ function MainContent() {
             title="XAcademy" 
             text={
               <>
-                Lorem ipsum odor amet, consectetuer adipiscing elit.
+                Lorem ipsum odor amet,<br/> consectetuer adipiscing elit.
                 <br />
-                Neque etiam leo egestas finibus mollis pharetra.
+                Neque etiam leo egestas<br/> finibus mollis pharetra.
               </>
             } 
             imgSrc="./img/Asset 79@300x.png" 
@@ -46,9 +46,9 @@ function MainContent() {
             title="XFinance" 
             text={
               <>
-                Lorem ipsum odor amet, consectetuer adipiscing elit.
+                Lorem ipsum odor amet,<br/> consectetuer adipiscing elit.
                 <br />
-                Neque etiam leo egestas finibus mollis pharetra.
+                Neque etiam leo egestas<br/> finibus mollis pharetra.
               </>
             } 
             imgSrc="./img/Asset 80@300x.png" 
@@ -60,9 +60,9 @@ function MainContent() {
             title="XStudios" 
             text={
               <>
-                Lorem ipsum odor amet, consectetuer adipiscing elit.
+                Lorem ipsum odor amet,<br/> consectetuer adipiscing elit.
                 <br />
-                Neque etiam leo egestas finibus mollis pharetra.
+                Neque etiam leo egestas<br/> finibus mollis pharetra.
               </>
             } 
             imgSrc="./img/Asset 81@300x.png" 
@@ -73,4 +73,3 @@ function MainContent() {
   );
 }
 
-export default MainContent;
