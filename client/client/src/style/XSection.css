@@ -23,7 +23,7 @@ body {
   padding-top: 2rem;
   max-height: fit-content;
   height: 35vw;
-  gap: 2rem; /* Added gap for better spacing */
+  gap: 3rem; /* Added gap for better spacing */
 }
 
 .typed-logo img {
@@ -33,14 +33,14 @@ body {
 }
 
 .logo img {
-  width: 38vw;
+  width: 36vw;
   height: fit-content;
 }
 
 .x-all {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 8rem;
+  gap: 7rem;
   width: 100%;
   margin-top: 4.5rem;
   
@@ -181,22 +181,28 @@ body {
 }
 
 /* Small Tablets: ≤873px */
-@media (max-width: 873px) {
+@media (max-width: 768px) {
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .main-content {
-    padding: 1.5rem;
-    margin-top: 4rem;
+    padding: 2.5rem !important;
+    margin-top: 2.5rem !important;
   }
 
   .ecadx-container {
-    margin-left: 4rem;
+    padding-top: 0.5rem;
+    margin-left: 0rem;
+    gap: 2rem !important;
   }
 
+  .x-all{
+    margin-top: 1rem !important;
+    gap: 2.75rem !important;
+  }
   .x-container {
-    gap: 8vw; /* Adjusted gap for tablets */
+    gap: 23vw !important; 
   }
 
   .x-container img {
@@ -205,30 +211,33 @@ body {
 
   .intro-text {
     max-width: 50vw;
+    font-size: 0.85rem!important;
   }
 }
 
 /* Laptops: ≤1536px */
-@media (max-width: 1536px) {
+@media (max-width: 1024px) {
   body {
     font-size: 20px;
   }
 
   .main-content {
-    padding: 2rem;
-    margin-top: 5rem;
+    padding: 2rem ;
+    margin-top: 2rem ;
   }
 
   .ecadx-container {
-    gap: 5rem;
+    gap: 5rem ;
   }
 
   .x-all {
-    gap: 5.5rem;
+    margin-top: 3.5rem;
+    gap: 4rem;
   }
 
-  .x-container {
-    gap: 25vw; /* Adjusted gap for laptops */
+  .x-container,
+  .x-container.reverse {
+    gap: 23vw; /* Adjusted gap for laptops */
   }
 
   .x-container img {
@@ -236,14 +245,23 @@ body {
   }
 
   .intro-text {
-    max-width: 40vw;
+    max-width: 35vw;
+    font-size: 1rem;
+  }
+
+  #construction p,
+  #academy p,
+  #finance p,
+  #studios p {
+    margin-left: 2rem;
+    margin-top: 1rem;
   }
 }
 
 /* Desktops: ≥1920px */
-@media (min-width: 1920px) {
+@media (min-width: 2560px) {
   body {
-    font-size: 22px;
+    font-size: 3rem;
   }
 
   .main-content {
@@ -253,7 +271,7 @@ body {
 
   .x-all {
     gap: 7rem;
-    margin: 0;
+    margin-top: 5rem;
   }
 
   .ecadx-container {
