@@ -59,7 +59,7 @@ body {
 }
 
 .logo {
-  max-width: 96px;
+  max-width: 4rem;
   transition: all 0.3s ease;
   margin-right: 16px;
 }
