@@ -1,0 +1,132 @@
+/* Shared Footer Styles - Use this file for consistent footer styling across all pages */
+
+/* Footer Styles */
+.footer {
+  background-color: #fff;
+  padding: 60px 0 30px;
+  border-top: 1px solid #eee;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.footer-links-left,
+.footer-links-right {
+  display: flex;
+}
+
+.footer-links-left a,
+.footer-links-right a {
+  color: #003b71;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  margin-right: 30px;
+}
+
+.footer-links-right a {
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+.footer-links-left a::after,
+.footer-links-right a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffd700;
+  transition: width 0.3s ease;
+}
+
+.footer-links-left a:hover::after,
+.footer-links-right a:hover::after {
+  width: 100%;
+}
+
+.footer-links-left a:hover,
+.footer-links-right a:hover {
+  color: #ffd700;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  color: #003b71;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  color: #3498db;
+}
+
+.footer-copyright {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive Footer Styles */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .footer-links-left,
+  .footer-links-right {
+    justify-content: center;
+  }
+  
+  .footer-links-left a,
+  .footer-links-right a {
+    margin: 0 15px;
+  }
+  
+  .footer-social {
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+  
+  .footer-content {
+    gap: 15px;
+  }
+  
+  .footer-links-left a,
+  .footer-links-right a {
+    font-size: 12px;
+    margin: 0 10px;
+  }
+  
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    margin: 0 8px;
+  }
+} 
