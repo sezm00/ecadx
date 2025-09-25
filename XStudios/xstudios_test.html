@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test_xstudios.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+
+    <title>XStudios | Test</title>
+  </head>
+  <body>
+
+    <nav class="navbar">
+      <!-- Logo -->
+      <a href="#" class="logo"><img src="../img/Asset 91@300x.png" alt=""></a>
+
+      <!-- Hamburger icon -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Navbar links -->
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="main">
+      <section class="hero">
+        <h1 class="hero-title">
+          <span>We don't follow trends.</span> 
+          <span>We <u><b>CREATE</b></u> statements.</span>
+        </h1>
+
+        <div class="hero-subtitle">
+          <p>XStudios is a design studio shaping brands and experiences that define the future. Recognized for pushing boundaries in design and strategy, we partner with businesses at pivotal moments to reimagine, create, and build what’s next.</p>
+        </div>
+      </section>
+
+
+
+    </main>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navbar = document.querySelector(".navbar");
+
+      menuToggle.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+      });
+    </script>
+
+  </body>
+</html>
