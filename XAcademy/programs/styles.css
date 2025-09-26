@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Yeseva+One&display=swap');
+:root { --main-color:#27C0F2; --dark-color:#1a9fc2; --light:#eafaff; --text:#333; --muted:#777; }
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Raleway",sans-serif}
+body{background:#fff;color:var(--text);line-height:1.6;overflow-x:hidden}
+nav{width:100%;display:flex;justify-content:space-between;align-items:center;padding:15px 8%;background:#000035;position:fixed;top:0;left:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+nav .logo img{width:4rem;height:auto}
+nav ul{display:flex;list-style:none}
+nav ul li{margin:0 15px}
+nav ul li a{color:#fff;text-decoration:none;font-weight:500;position:relative}
+nav ul li a.active,nav ul li a:hover{color:var(--main-color)}
+.menu-toggle{display:none;color:#fff;font-size:24px;cursor:pointer}
+
+.page-title{font-family:'Yeseva One',serif;font-size:2.2rem;color:var(--main-color)}
+.page-sub{color:var(--muted);margin-top:6px}
+
+.programs-section{padding:40px 8% 80px}
+.programs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:10px}
+.program-card{background:#fff;border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.06);padding:22px;position:relative;overflow:hidden;transition:.3s}
+.program-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:var(--main-color)}
+.program-card img{width:64px;height:64px;object-fit:contain;margin-bottom:12px}
+.program-card h3{color:var(--main-color);margin-bottom:8px;font-size:1.25rem}
+.program-card p{color:var(--muted);min-height:48px}
+.program-card:hover{transform:translateY(-6px);box-shadow:0 14px 28px rgba(0,0,0,.1)}
+.more-btn{margin-top:14px;background:var(--dark-color);color:#fff;border:none;border-radius:24px;padding:10px 16px;cursor:pointer;transition:.3s}
+.program-card:hover .more-btn{background:#000}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;padding:20px;z-index:1200}
+.modal.show{display:flex}
+.modal-content{background:#fff;border-radius:16px;max-width:640px;width:100%;padding:24px 22px 22px;position:relative;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.modal-close{position:absolute;right:12px;top:12px;background:#eee;border:none;border-radius:50%;width:36px;height:36px;cursor:pointer}
+
+footer{background:#1a1a1a;color:#fff;padding:60px 5% 30px}
+.footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.footer-column h3{color:var(--main-color);font-family:'Yeseva One',serif;margin-bottom:12px}
+.footer-column p, .footer-column a{color:#ccc;text-decoration:none}
+
+@media(max-width:768px){nav ul{display:none;position:absolute;top:70px;left:0;width:100%;background:var(--main-color);flex-direction:column;padding:20px;text-align:center}nav ul.active{display:flex}.menu-toggle{display:block}}
+

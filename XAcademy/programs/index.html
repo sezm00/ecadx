@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs | XAcademy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Yeseva+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAV (same header) -->
+  <nav>
+    <div class="logo"><img src="C:\Users\omars\OneDrive\Documents\GitHub\ecadx\img\Asset 88@300x.png" alt="XAcademy Logo"></div>
+    <ul id="menu">
+      <li><a href="../home/xacademy_test.html">Home</a></li>
+      <li><a href="../about/index.html">About</a></li>
+      <li><a href="./index.html" class="active">Programs</a></li>
+      <li><a href="#KidsBay">KidsBay</a></li>
+      <li><a href="../gallery/index.html">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Page Title (no hero) -->
+  <section style="padding:110px 8% 20px; background:#f7fdff;">
+    <h1 class="page-title">Our Programs</h1>
+    <p class="page-sub">Explore six engaging programs designed to inspire curiosity, creativity, and growth.</p>
+  </section>
+
+  <!-- Programs Grid -->
+  <section class="programs-section">
+    <div class="programs-grid">
+      <article class="program-card" data-program="stem">
+        <img src="../../img/Asset 82@300x.png" alt="STEM">
+        <h3>STEM Education</h3>
+        <p>Hands-on science, technology, engineering, and math.</p>
+        <button class="more-btn">Learn more</button>
+      </article>
+
+      <article class="program-card" data-program="arts">
+        <img src="../../img/Asset 81@300x.png" alt="Arts">
+        <h3>Arts & Creativity</h3>
+        <p>Visual arts, music, theatre, and creative writing.</p>
+        <button class="more-btn">Learn more</button>
+      </article>
+
+      <article class="program-card" data-program="language">
+        <img src="../../img/Asset 80@300x.png" alt="Language">
+        <h3>Language Learning</h3>
+        <p>Become a global citizen through languages and culture.</p>
+        <button class="more-btn">Learn more</button>
+      </article>
+
+      <article class="program-card" data-program="sports">
+        <img src="../C:\Users\omars\OneDrive\Documents\GitHub\ecadx\img\Asset 90@300x.png" alt="Sports">
+        <h3>Sports & Wellness</h3>
+        <p>Teamwork, fitness, and healthy lifestyles.</p>
+        <button class="more-btn">Learn more</button>
+      </article>
+
+      <article class="program-card" data-program="early">
+        <img src="../../img/Asset 88@300x.png" alt="Early Years">
+        <h3>Early Years (KidsBay)</h3>
+        <p>Play-based learning for early development.</p>
+        <button class="more-btn">Learn more</button>
+      </article>
+
+      <article class="program-card" data-program="summer">
+        <img src="../../img/Asset 89@300x.png" alt="Camps">
+        <h3>Summer Camps</h3>
+        <p>Week-long themed camps full of discovery.</p>
+        <button class="more-btn">Learn more</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="programModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal" aria-label="Close"><i class="fas fa-times"></i></button>
+      <h3 id="modalTitle">Program</h3>
+      <p id="modalBody">Details about the selected program will appear here.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>XAcademy</h3>
+        <p>Where learning and care go hand in hand.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../home/xacademy_test.html">Home</a></li>
+          <li><a href="../about/index.html">About</a></li>
+          <li><a href="./index.html">Programs</a></li>
+          <li><a href="../gallery/index.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p><i class="fas fa-phone"></i> +20 123 456 789</p>
+        <p><i class="fas fa-envelope"></i> info@xacademy.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
+
