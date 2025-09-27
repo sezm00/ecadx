@@ -18,27 +18,27 @@ document.addEventListener("DOMContentLoaded", function() {
         status: "Completed"
       },
       3: {
-        title: "StarChem Industrial Facility",
-        location: "Waterfront District",
-        description: "Chemical processing plant with advanced safety systems.",
+        title: "Beverly Hills Private Villa",
+        location: "Beverly Hills",
+        description: "A luxury residential villa in Beverly Hills, Sheikh Zayed. We handled complete architectural design and turnkey construction, delivering a high-end family home with premium finishes.",
         status: "Completed"
       },
       4: {
-        title: "StarChem Industrial Facility",
-        location: "Waterfront District",
-        description: "Chemical processing plant with advanced safety systems.",
+        title: "Ourika Compound Design Services",
+        location: "Industrial Zone",
+        description: "Design enhancement for Developer X’s flagship project in Sheikh Zayed. We provided 2D plan optimization and 3D visualization for select villas in this Moroccan-inspired compound.",
         status: "Completed"
       },
       5: {
-        title: "StarChem Industrial Facility",
-        location: "Waterfront District",
-        description: "Chemical processing plant with advanced safety systems.",
+        title: "Muse El Midan",
+        location: "Medical District",
+        description: "Revolutionary circular retail hub in New Cairo with 50+ premium brands (2025)",
         status: "Completed"
       },
       6: {
-        title: "StarChem Industrial Facility",
-        location: "Waterfront District",
-        description: "Chemical processing plant with advanced safety systems.",
+        title: "Bianchi Sahe",
+        location: "Industrial Zone",
+        description: "North Coast sales office transformation preserving 1980s architectural character (2024)",
         status: "Completed"
       }
     };
@@ -51,11 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <h2>${project.title}</h2>
           <p><strong>Location:</strong> ${project.location}</p>
           <p>${project.description}</p>
-          <ul>
-            <li><strong>Area:</strong> ${project.area}</li>
-            <li><strong>Duration:</strong> ${project.duration}</li>
-            <li><strong>Status:</strong> ${project.status}</li>
-          </ul>
+          <p><strong>Status:</strong> ${project.status}</p>
         `;
         modal.style.display = "flex";
       });

@@ -78,9 +78,33 @@
                         <p>Wadi Al Rabie Village, El Motamayz District, Administrative Building 2, Apartment 103</p>
                         <p>6 October, Giza, Egypt</p>
                     </div>
-
-                
             </div>
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <h3 class="form-title">Send Us a Message</h3>
+                <form id="contact-form" action="https://formspree.io/f/xovkjkdv" method="POST" class="contact-form">
+                  
+                  <div class="form-row">
+                    <input type="text" name="first_name" placeholder="First Name" required>
+                    <input type="text" name="last_name" placeholder="Last Name" required>
+                  </div>
+                  
+                  <div class="form-row">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="tel" name="phone" placeholder="Phone Number">
+                  </div>
+                  
+                  <div class="form-row">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                  </div>
+                  
+                  <button type="submit" class="btn-submit">Send Message</button>
+                  <p id="form-status"></p>
+                </form>
+              </div>
+              
+              
+  
         </div>
     </section>
 
