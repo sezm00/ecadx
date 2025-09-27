@@ -13,16 +13,87 @@ nav ul li a.active,nav ul li a:hover{color:var(--main)}
 .page-title{font-family:'Yeseva One',serif;font-size:2.2rem;color:var(--main)}
 .page-sub{color:var(--muted);margin-top:6px}
 
-.gallery-wrap{padding:30px 6% 80px}
-.masonry{columns:1 260px;column-gap:16px}
-.masonry-item{display:block;margin:0 0 16px;border-radius:12px;overflow:hidden;box-shadow:0 6px 16px rgba(0,0,0,.08);transition:.3s}
-.masonry-item:hover{transform:translateY(-4px)}
-.masonry-item img{width:100%;height:auto;display:block}
-
-.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:1200}
-.lightbox.show{display:flex}
-.lightbox img{max-width:90vw;max-height:85vh;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
-.lightbox-close{position:absolute;top:20px;right:20px;width:42px;height:42px;border-radius:50%;background:#fff;border:none;cursor:pointer}
+/* Masonry Layout for Gallery */
+#gallery {
+    columns: 4 220px;       /* responsive columns (min 220px) */
+    column-gap: 16px;
+    padding: 30px 6% 80px;
+  }
+  
+  #gallery img {
+    width: 100%;
+    height: 200px;          /* fixed height for consistency */
+    object-fit: cover;      /* crop instead of stretching */
+    display: block;
+    margin: 0 0 16px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+    transition: transform .3s;
+  }
+  
+  #gallery img:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Responsive tweaks */
+  @media(max-width: 992px) {
+    #gallery {
+      columns: 3 200px;
+    }
+  }
+  
+  @media(max-width: 768px) {
+    #gallery {
+      columns: 2 150px;
+    }
+  }
+  
+  @media(max-width: 480px) {
+    #gallery {
+      columns: 1 100%;
+    }
+  }
+/* Masonry Layout for Gallery */
+#gallery {
+    columns: 4 220px;       /* responsive columns (min 220px) */
+    column-gap: 16px;
+    padding: 30px 6% 80px;
+  }
+  
+  #gallery img {
+    width: 100%;
+    height: 200px;          /* fixed height for consistency */
+    object-fit: cover;      /* crop instead of stretching */
+    display: block;
+    margin: 0 0 16px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+    transition: transform .3s;
+  }
+  
+  #gallery img:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Responsive tweaks */
+  @media(max-width: 992px) {
+    #gallery {
+      columns: 3 200px;
+    }
+  }
+  
+  @media(max-width: 768px) {
+    #gallery {
+      columns: 2 150px;
+    }
+  }
+  
+  @media(max-width: 480px) {
+    #gallery {
+      columns: 1 100%;
+    }
+  }
+    
 
 footer{background:#1a1a1a;color:#fff;padding:60px 5% 30px}
 .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
