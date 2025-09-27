@@ -58,19 +58,30 @@ body {
 }
 
 .logo {
-    max-width: 96px;
+    max-width: 4rem;
     transition: all 0.3s ease;
     margin-right: 16px;
-}
-
-.header.scrolled .logo {
+  }
+  
+  .header.scrolled .logo {
     max-width: 78px;
-}
-
-.logo img {
+  }
+  
+  .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .logo img {
     width: 100%;
     height: auto;
-}
+    transition: opacity 0.3s ease;
+  }
+  
+  .logo a:hover img {
+    opacity: 0.8;
+  }
 
 .main-nav ul {
     display: flex;
