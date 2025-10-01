@@ -90,13 +90,18 @@ nav ul li a:hover {
 nav ul li a:hover:after {
   width: 100%;
 }
+nav ul li a.active {
+  color: var(--main-color);
+}
+nav ul li a.active:after {
+  width: 100%;
+}
 .menu-toggle {
   display: none;
   color: white;
   font-size: 24px;
   cursor: pointer;
 }
-
 /* HERO */
 .hero {
   width: 100%;
