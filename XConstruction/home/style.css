@@ -440,97 +440,6 @@ body {
   opacity: 1;
 }
 
-/* Newsroom Section */
-.newsroom {
-  padding: 80px 0;
-  background-color: #f9f9f9;
-  position: relative;
-}
-
-.newsroom .container {
-  position: relative;
-}
-
-.news-cards {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -15px;
-  margin-top: 40px;
-}
-
-.news-card {
-  flex: 0 0 calc(33.333% - 30px);
-  margin: 0 15px;
-  background-color: #fff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
-  margin-bottom: 30px;
-  border-radius: 0; /* Ensure cards are not square */
-}
-
-.news-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.news-card-image {
-  height: 220px; /* Adjusted height to make cards less square */
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.news-card-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 59, 113, 0.5), rgba(0, 59, 113, 0.9));
-  z-index: 1;
-}
-
-.news-card-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  color: white;
-  z-index: 2;
-}
-
-.news-card-content h3 {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.news-card-info {
-  padding: 20px;
-}
-
-.news-date {
-  color: #666;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.news-card-info h4 {
-  color: #003b71;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 600;
-}
-
-.newsroom-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-}
-
 /* Our Services Section */
 .our-services {
   position: relative;
@@ -626,90 +535,40 @@ body {
   background-color: #fff;
 }
 
-/* Featured Projects Section */
-.featured-projects {
-  position: relative;
-  padding: 80px 0;
-  background: none;
-  overflow: hidden;
-}
 
-.projects-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  filter: blur(2px) brightness(0.7);
-  z-index: 1;
-  transition: background-image 0.2s ease, opacity 0.3s ease;
-  opacity: 0.7;
-  will-change: background-image, opacity;
-}
-
-.projects-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 2;
-}
-
-.featured-projects .container {
-  position: relative;
-  z-index: 3;
-}
-
-.featured-projects .section-title {
-  color: #003b71;
-  font-size: 56px;
-  font-weight: 700;
-  margin-bottom: 40px;
-  letter-spacing: -1px;
-}
-
-.featured-projects .section-subtitle {
-  color: var(--secondary-color);
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
-
+/* Projects Section */
 .projects-grid {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 40px;
+  gap: 20px;
   margin-top: 40px;
 }
 
 .project-card {
-  flex: 0 0 340px;
-  background: none;
-  box-shadow: none;
-  border-radius: 0;
-  overflow: visible;
+  position: relative;
+  overflow: hidden;
   transition: transform 0.3s;
-  z-index: 4;
-  cursor: pointer;
+  text-decoration: none;
 }
 
-.project-card:hover {
-  transform: translateY(-10px) scale(1.03);
+.project-card.wide {
+  flex: 0 0 calc(66.666% - 13.33px);
+  height: 300px;
+}
+
+.project-card.square {
+  flex: 0 0 calc(33.333% - 6.67px);
+  height: 300px;
 }
 
 .project-image {
-  height: 220px;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   border-radius: 8px;
   position: relative;
-  overflow: hidden;
   display: flex;
   align-items: flex-end;
 }
@@ -720,45 +579,7 @@ body {
   font-size: 28px;
   font-weight: 700;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-}
-
-/* Remove the blue underlines from project titles */
-.project-card h3 {
-  color: #fff;
-  text-decoration: none;
-  border-bottom: none;
-}
-
-/* Completely remove any underlines from project content */
-.project-content h3,
-.project-content p,
-.project-content a {
-  text-decoration: none;
-  border-bottom: none;
-}
-
-.project-content h3::after,
-.project-content p::after,
-.project-content a::after {
-  display: none !important;
-  content: none !important;
-  background: none !important;
-}
-
-/* Add this to ensure no underlines appear on any project elements */
-.featured-projects a,
-.featured-projects h3,
-.featured-projects p {
-  text-decoration: none;
-  border-bottom: none;
-}
-
-.featured-projects a::after,
-.featured-projects h3::after,
-.featured-projects p::after {
-  display: none !important;
-  content: none !important;
-  background: none !important;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
 }
 
 .project-content p {
@@ -769,81 +590,24 @@ body {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-.projects-footer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 40px;
-  z-index: 4;
-}
-
-.show-more-btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 4px;
-  transition: var(--transition-fast);
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.show-more-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: var(--transition-fast);
-  z-index: -1;
-}
-
-.show-more-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-}
-
-.show-more-btn:hover::before {
-  left: 0;
-}
-
-/* Remove prev/next buttons for projects */
-.nav-buttons-custom {
-  display: none !important;
-}
-
 @media (max-width: 1024px) {
-  .projects-grid {
-    gap: 20px;
+  .project-card.wide {
+      flex: 0 0 calc(66.666% - 13.33px);
+      height: 250px;
   }
-  .project-card {
-    flex: 0 0 260px;
-  }
-  .project-image {
-    height: 160px;
-  }
-  .featured-projects .section-title {
-    font-size: 36px;
-  }
-}
-@media (max-width: 768px) {
-  .projects-grid {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .project-card {
-    flex: 1 1 100%;
-  }
-  .project-image {
-    height: 180px;
+  .project-card.square {
+      flex: 0 0 calc(33.333% - 6.67px);
+      height: 250px;
   }
 }
 
+@media (max-width: 768px) {
+  .project-card.wide,
+  .project-card.square {
+      flex: 0 0 100%;
+      height: 200px;
+  }
+}
 /* Footer Styles */
 .footer {
   background-color: #fff;
