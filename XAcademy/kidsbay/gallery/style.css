@@ -1,0 +1,112 @@
+/* Global styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #333;
+  }
+  
+  /* Enforce pencil cursor globally, including hover */
+  *, *:hover, *:focus, *:active {
+    cursor: url("../../../img/pencil.png") 4 4, default !important;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #fdf6e3;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  header .logo img {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  header nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  header nav a:hover {
+    color: #ff6b6b;
+  }
+  
+  /* Sections */
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4cafef;
+  }
+  
+  /* Masonry Gallery */
+  .masonry {
+    column-count: 3;
+    column-gap: 15px;
+    padding: 0 20px;
+  }
+  
+  .masonry img {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .masonry img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  /* Responsive masonry */
+  @media (max-width: 900px) {
+    .masonry {
+      column-count: 2;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .masonry {
+      column-count: 1;
+    }
+  }
+  
+  /* Contact */
+  .contact p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+  
+  /* Footer */
+  footer {
+    background: #fdf6e3;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
