@@ -39,6 +39,30 @@ body {
   z-index: -1;
 }
 
+.header {
+      background-color: #000;
+      padding: 10px 20px;
+      display: flex;
+}
+
+.header-content {
+      display: flex;
+      align-items: center;
+      position: relative;
+}
+
+.header-link img {
+      width: 2.5vw;
+      height: auto;
+      margin-left: 1.5rem;
+}
+.header-link :hover{
+      opacity: 0.8;
+      transition: opacity 0.3s;
+      width: 2.7vw;
+      height: auto;
+}
+
 /* NAV */
 nav {
   width: 100%;

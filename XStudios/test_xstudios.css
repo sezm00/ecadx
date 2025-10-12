@@ -12,13 +12,23 @@ body {
     .header-content {
       display: flex;
       align-items: center;
+      position: relative;
     }
 
     .header-link img {
-      width: 3vw;
+      width: 2.5vw;
       height: auto;
-      margin-left: 3rem;
+      margin-left: 1.5rem;
     }
+
+    .header-link :hover{
+      opacity: 0.8;
+      transition: opacity 0.3s;
+      width: 2.7vw;
+      height: auto;
+    }
+
+    
     /* Navbar container */
     .navbar {
       display: flex;
