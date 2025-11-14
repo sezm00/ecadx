@@ -156,10 +156,7 @@ body {
   transition: opacity 700ms ease, transform 700ms ease;
 }
 
-/* Ensure milestone children can be reordered on mobile */
-.milestone > * {
-  order: 0; /* Default order for desktop */
-}
+/* Desktop: No grid-row restrictions - let grid auto-place items */
 
 .milestone.is-visible {
   opacity: 1;
@@ -399,18 +396,26 @@ body {
     transform: none; /* reset transform for mobile */
   }
   
-  /* Reorder 1990 and 2010s logos to appear AFTER cards on mobile */
-  .milestone[data-year="1990"] .milestone-card {
-    order: 1;
+  /* Reorder 1990 and 2010s logos to appear AFTER cards on mobile using grid-row */
+  /* Reset grid-row for these specific milestones on mobile */
+  .milestone[data-year="1990"].milestone-right .milestone-card {
+    grid-row: 1 !important; /* Card appears first */
   }
-  .milestone[data-year="1990"] .milestone-logo {
-    order: 2;
+  .milestone[data-year="1990"].milestone-right .milestone-logo {
+    grid-row: 2 !important; /* Logo appears after card - override desktop grid-row: 1 */
   }
-  .milestone[data-year="2010s"] .milestone-card {
-    order: 1;
+  .milestone[data-year="2010s"].milestone-right .milestone-card {
+    grid-row: 1 !important; /* Card appears first */
   }
-  .milestone[data-year="2010s"] .milestone-logo {
-    order: 2;
+  .milestone[data-year="2010s"].milestone-right .milestone-logo {
+    grid-row: 2 !important; /* Logo appears after card - override desktop grid-row: 1 */
+  }
+  
+  /* Ensure milestone-marker doesn't interfere (it's hidden but might affect grid) */
+  .milestone[data-year="1990"] .milestone-marker,
+  .milestone[data-year="2010s"] .milestone-marker {
+    display: none;
+    grid-row: auto;
   }
   
   .timeline-adv-items::before { left: 28px; transform: none; }
