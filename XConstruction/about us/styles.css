@@ -5,7 +5,9 @@
   --text-color: #333;
   --link-color: #003b71;
   --border-color: #eee;
+  --white: #ffffff;
   --transition-fast: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-medium: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -36,8 +38,8 @@ body {
   width: 100%;
   z-index: 100;
   padding: 12px 0;
+  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s, padding 0.4s, opacity 0.4s;
   background: rgba(0, 0, 0, 0.85);
-  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s, box-shadow 0.4s;
 }
 
 .header.scrolled {
@@ -66,12 +68,12 @@ body {
 .main-nav ul { display: flex; list-style: none; }
 .main-nav li { margin-left: 30px; }
 .main-nav a {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
-  position: relative;
   transition: var(--transition-fast);
+  position: relative;
 }
 .main-nav a::after {
   content: "";
@@ -92,15 +94,17 @@ body {
   width: 30px;
   height: 21px;
   cursor: pointer;
+  position: relative;
   z-index: 10000;
 }
+
 .mobile-menu-toggle span {
   display: block;
   height: 3px;
   width: 100%;
-  background-color: #fff;
+  background-color: white;
   border-radius: 3px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
 }
 .mobile-menu-toggle.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
 .mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
@@ -165,11 +169,11 @@ body {
 }
 
 .milestone-left .milestone-logo {
-  grid-column: 3;
+  grid-column: 3; /* Right side - opposite of description */
   justify-self: center;
   align-self: center; /* vertically centered in white space */
-  width: 110px;
-  height: 90px;
+  width: 160px; /* Bigger logo */
+  height: 130px; /* Bigger logo */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -186,12 +190,15 @@ body {
 }
 
 .milestone-right .milestone-logo {
-  position: absolute;
-  left: 25%; /* approximately center of left column (1fr out of 1fr+80px+1fr) */
-  top: 0; /* align exactly with card's top edge - same as card */
-  transform: translateX(-50%); /* center the logo horizontally */
-  width: 110px;
-  height: 90px;
+  grid-column: 1; /* Left side - opposite of description */
+  grid-row: 1; /* Ensure it's in the same row as card */
+  justify-self: center;
+  align-self: start; /* align to top - same as card */
+  position: relative; /* Allow top positioning */
+  top: 70px; /* Start aligned with card top - change this value to move up/down */
+  margin-top: 0; /* Reset margin */
+  width: 160px; /* Bigger logo */
+  height: 130px; /* Bigger logo */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -215,7 +222,7 @@ body {
 
 .milestone-right:hover .milestone-logo {
   opacity: 1;
-  transform: translateX(-50%) scale(1.05); /* preserve positioning and apply scale */
+  transform: scale(1.05); /* scale on hover */
 }
 
 /* ===== CARD STYLE ===== */
@@ -349,6 +356,10 @@ body {
 
 /* === RESPONSIVE === */
 @media (max-width: 900px) {
+  .header {
+    position: fixed; /* Ensure header stays fixed at all screen sizes */
+  }
+  
   .milestone { 
     grid-template-columns: 1fr; 
     gap: 20px; 
@@ -361,6 +372,15 @@ body {
     justify-self: center; 
     width: 100%; 
     margin: 0;
+    margin-left: 20px; /* move cards to the right a little */
+  }
+  
+  /* Reset absolute positioning for mobile - logos go under cards */
+  .milestone-right .milestone-logo {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
   }
   
   .milestone-left .milestone-logo,
@@ -368,7 +388,7 @@ body {
     grid-column: 1; 
     justify-self: center; 
     align-self: start;
-    margin-top: 16px; 
+    margin-top: 16px !important; 
     width: 110px; 
     height: 70px; 
     transform: none; /* reset transform for mobile */
@@ -386,18 +406,71 @@ body {
 }
 
 @media (max-width: 768px) {
-  .header { position: relative; padding: 20px 0; }
-  .main-nav { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); flex-direction: column; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.3s; }
-  .main-nav.active { display: flex; }
-  .main-nav ul { flex-direction: column; align-items: center; width: 100%; }
-  .main-nav li { margin: 20px 0; font-size: 22px; }
-  .main-nav a { color: #fff; font-size: 22px; font-weight: bold; }
-  .main-nav a:hover { color: #ffd700; }
-  .mobile-menu-toggle { display: flex; z-index: 10000; }
+  .header { 
+    position: fixed; /* Keep fixed for scroll behavior to work */
+    padding: 12px 0; 
+  }
+  
+  .main-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity var(--transition-medium);
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .main-nav ul {
+    opacity: 1;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .main-nav.active ul {
+    opacity: 1;
+    transform: none;
+  }
+
+  .main-nav li {
+    margin: 20px 0;
+    font-size: 22px;
+  }
+
+  .main-nav a {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .main-nav a:hover {
+    color: #ffd700;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    z-index: 10000;
+  }
+  
   .footer-content { flex-direction: column; }
   .footer-links-left, .footer-links-right { justify-content: center; margin: 15px 0; }
   .footer-links-left a, .footer-links-right a { margin: 0 15px; }
   .footer-social { margin-bottom: 20px; }
+  .timeline-advanced { padding-top: 100px; } /* Add padding for fixed header */
 }
 
 @media (max-width: 480px) {

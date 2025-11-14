@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function onScroll() {
     const currentScroll = window.pageYOffset;
+    const isMobile = window.innerWidth <= 768;
 
     if (currentScroll > 50) {
       header.classList.add("scrolled");
@@ -13,9 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
       header.classList.remove("scrolled");
     }
 
+    // Header show/hide on scroll - works on both mobile and desktop
     if (currentScroll > lastScroll && currentScroll > 80) {
+      // Scrolling down - hide header
       header.classList.add("header-hidden");
     } else {
+      // Scrolling up - show header
       header.classList.remove("header-hidden");
     }
 
@@ -27,6 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!ticking) {
       window.requestAnimationFrame(onScroll);
       ticking = true;
+    }
+  });
+  
+  window.addEventListener("resize", () => {
+    // On resize, show header if at top of page
+    if (window.pageYOffset <= 80) {
+      header.classList.remove("header-hidden");
     }
   });
 

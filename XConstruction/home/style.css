@@ -622,10 +622,15 @@ body {
 }
 
 @media (max-width: 768px) {
+  .projects-grid {
+    flex-direction: column; /* Stack projects vertically on mobile */
+  }
+  
   .project-card.wide,
   .project-card.square {
-      flex: 0 0 100%;
+      flex: 0 0 100%; /* 1 project per line on mobile */
       height: 200px;
+      width: 100%;
   }
 }
 /* Footer Styles */
