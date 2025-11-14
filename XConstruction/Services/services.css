@@ -209,13 +209,27 @@ body {
 }
 
 .service-icon {
-    color: var(--link-color);
     margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.service-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
 .service-card:hover .service-icon {
     transform: scale(1.1);
+}
+
+.service-card:hover .service-icon img {
+    transform: scale(1.05);
 }
 
 .service-card h3 {
