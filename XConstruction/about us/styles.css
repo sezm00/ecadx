@@ -156,6 +156,11 @@ body {
   transition: opacity 700ms ease, transform 700ms ease;
 }
 
+/* Ensure milestone children can be reordered on mobile */
+.milestone > * {
+  order: 0; /* Default order for desktop */
+}
+
 .milestone.is-visible {
   opacity: 1;
   transform: translateY(0);
@@ -392,6 +397,20 @@ body {
     width: 110px; 
     height: 70px; 
     transform: none; /* reset transform for mobile */
+  }
+  
+  /* Reorder 1990 and 2010s logos to appear AFTER cards on mobile */
+  .milestone[data-year="1990"] .milestone-card {
+    order: 1;
+  }
+  .milestone[data-year="1990"] .milestone-logo {
+    order: 2;
+  }
+  .milestone[data-year="2010s"] .milestone-card {
+    order: 1;
+  }
+  .milestone[data-year="2010s"] .milestone-logo {
+    order: 2;
   }
   
   .timeline-adv-items::before { left: 28px; transform: none; }
