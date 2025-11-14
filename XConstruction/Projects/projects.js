@@ -8,40 +8,47 @@ document.addEventListener("DOMContentLoaded", function() {
       1: {
         title: "Ghabour BAJAJ Automotive",
         location: "6th October City",
+        mapsLink: "https://www.google.com/maps?q=6th+October+City",
         description: "A complete industrial facility in 6th October City. Includes factory buildings, offices, and specialized automotive workspaces.",
         status: "Completed"
       },
       2: {
         title: "StarChem Industrial Facility",
-        location: "Waterfront District",
+        location: "Industrial Zone",
+        mapsLink: "https://www.google.com/maps?q=Industrial+Zone,+6th+October+City",
         description: "Chemical processing plant with advanced safety systems.",
         status: "Completed"
       },
       3: {
         title: "Beverly Hills Private Villa",
-        location: "Beverly Hills",
+        location: "Sheikh Zayed",
+        mapsLink: "https://www.google.com/maps?q=Beverly+Hills,+Sheikh+Zayed",
         description: "A luxury residential villa in Beverly Hills, Sheikh Zayed. We handled complete architectural design and turnkey construction, delivering a high-end family home with premium finishes.",
         status: "Completed"
       },
       4: {
         title: "Ourika Compound Design Services",
-        location: "Industrial Zone",
+        location: "Sheikh Zayed",
+        mapsLink: "https://www.google.com/maps?q=Sheikh+Zayed,+Giza,+Egypt",
         description: "Design enhancement for Developer X’s flagship project in Sheikh Zayed. We provided 2D plan optimization and 3D visualization for select villas in this Moroccan-inspired compound.",
         status: "Completed"
       },
       5: {
         title: "Muse El Midan",
-        location: "Medical District",
+        location: "New Cairo",
+        mapsLink: "https://www.google.com/maps?q=New+Cairo,+Egypt",
         description: "Revolutionary circular retail hub in New Cairo with 50+ premium brands (2025)",
         status: "Completed"
       },
       6: {
-        title: "Bianchi Sahe",
-        location: "Industrial Zone",
+        title: "Bianchi Sahel",
+        location: "North Coast",
+        mapsLink: "https://www.google.com/maps?q=Bianchi+Sahel,+North+Coast,+Egypt",
         description: "North Coast sales office transformation preserving 1980s architectural character (2024)",
         status: "Completed"
       }
     };
+    
   
     document.querySelectorAll(".project-card").forEach(card => {
       card.addEventListener("click", () => {
@@ -49,10 +56,18 @@ document.addEventListener("DOMContentLoaded", function() {
         const project = projectDetails[id];
         modalBody.innerHTML = `
           <h2>${project.title}</h2>
+          
           <p><strong>Location:</strong> ${project.location}</p>
-          <p>${project.description}</p>
+          <p>
+            <a href="${project.mapsLink}" target="_blank" rel="noopener noreferrer" class="map-link">
+              View on Google Maps
+            </a>
+          </p>
+
           <p><strong>Status:</strong> ${project.status}</p>
+          <p>${project.description}</p>
         `;
+
         modal.style.display = "flex";
       });
     });
