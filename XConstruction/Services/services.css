@@ -145,7 +145,7 @@ body {
 }
 
 .section-header {
-    text-align: center;
+    text-align: relative;
     margin-bottom: 60px;
 }
 
@@ -155,21 +155,20 @@ body {
     font-weight: 500;
     letter-spacing: 1px;
     margin-bottom: 10px;
-    display: block;
 }
 
 .subtitle-line {
     width: 60px;
     height: 2px;
     background-color: var(--secondary-color);
-    margin: 0 auto 20px;
+    margin-bottom: 20px;
 }
 
 .section-title {
     color: var(--link-color);
     font-size: 40px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .services-grid {
