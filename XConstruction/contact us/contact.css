@@ -185,7 +185,7 @@ body {
     display: flex;
     gap: 40px;
     margin-top: 40px;
-    align-items: stretch;
+    align-items: flex-start
 }
 
 /* Contact Form on LEFT */
@@ -194,9 +194,11 @@ body {
     padding: 40px;
     background: #fff;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-radius: 4px;
+    border-radius: 50px;
     display: flex;
     flex-direction: column;
+    height: auto;
+    align-items: flex-start
 }
 
 .contact-form-container .form-title {
@@ -206,6 +208,7 @@ body {
     margin-bottom: 20px;
     text-align: center;
 }
+
 
 .contact-form {
     display: flex;
@@ -250,7 +253,7 @@ body {
     border: none;
     font-size: 16px;
     font-weight: 600;
-    border-radius: 4px;
+    border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
     align-self: flex-start;
@@ -279,7 +282,7 @@ body {
 .contact-card {
     background: #fff;
     padding: 30px;
-    border-radius: 0;
+    border-radius: 50px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     width: 100%;
     text-align: center;

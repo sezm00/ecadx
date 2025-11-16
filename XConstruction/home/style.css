@@ -368,7 +368,7 @@ body {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
-  border-radius: 4px;
+  border-radius: 20px;
   transition: var(--transition-fast);
   position: relative;
   overflow: hidden;
@@ -638,6 +638,34 @@ body {
   .projects-grid {
     flex-direction: column;
   }
+  .nav-buttons-custom {
+    position: absolute;
+    right: auto; /* Remove right positioning */
+    left: 50%; /* Center horizontally */
+    top: auto; /* Remove top positioning */
+    bottom: 80px; /* Position from bottom */
+    transform: translateX(-50%); /* Center the element */
+    flex-direction: row; /* Change to horizontal layout */
+    gap: 40px; /* Space between buttons */
+    align-items: center;
+  }
+  
+  .nav-buttons-custom .nav-button {
+    text-align: center; /* Center text */
+    padding: 0; /* Remove padding */
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .nav-buttons-custom {
+    bottom: 60px; /* Adjust position for smaller screens */
+    gap: 30px; /* Less space between buttons */
+  }
+  
+  .slide-counter-custom {
+    bottom: 120px; /* Move counter up to make space for buttons */
+  }
   
   .project-card.wide:first-child,
   .project-card.square,
@@ -898,7 +926,7 @@ body {
 
   .image-left,
   .image-right {
-    height: 300px;
+    display: none;
   }
 
   .news-card,

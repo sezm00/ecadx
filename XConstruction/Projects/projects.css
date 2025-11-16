@@ -472,7 +472,7 @@ body {
   .project-card {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 25px;
     cursor: pointer;
   }
   

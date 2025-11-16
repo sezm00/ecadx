@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const totalSlides = slides.length
   let currentSlide = 0
   let slideInterval
-  const intervalTime = 4500 // 4.5 seconds
+  const intervalTime = 4900 // 4.9 seconds
 
   // Update slide counter (custom)
   function updateSlideCounter() {
