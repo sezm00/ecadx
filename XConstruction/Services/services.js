@@ -1,3 +1,15 @@
+preloadImages();
+function preloadImages() {
+  const images = [
+    "../images/architecture.png",
+    "../images/LUXURY RESIDENTIAL CONSTRUCTION.png",
+    "../images/commercial.png"
+  ]
+  images.forEach((image) => {
+    const img = new Image();
+    img.src = image;
+  });
+}
 document.addEventListener('DOMContentLoaded', function() {
     // Header scroll effect
     const header = document.querySelector(".header")

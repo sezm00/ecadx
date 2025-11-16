@@ -57,40 +57,40 @@ document.addEventListener('DOMContentLoaded', function() {
       if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' })
     })
   })
+
+  // =========================
+  // Contact form submission
+  // =========================
+  const form = document.getElementById("contact-form")
+  const status = document.getElementById("form-status")
+
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault() // stop page redirect
+      const data = new FormData(form)
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        })
+
+        if (response.ok) {
+          status.textContent = "Message Sent! Thank you."
+          form.reset()
+        } else {
+          status.textContent = "Oops! Something went wrong."
+        }
+      } catch (error) {
+        status.textContent = " Network error. Try again later."
+      }
+    })
+  }
 })
 
 function openGoogleMapsDirections() {
   const destination = 'Wadi Al Rabie Village, El Motamayz District, Administrative Building 2, Apartment 103, 6 October, Giza, Egypt'
   const encodedDestination = encodeURIComponent(destination)
   window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedDestination}`, '_blank')
-}
-
-// =========================
-// Contact form submission
-// =========================
-const form = document.getElementById("contact-form")
-const status = document.getElementById("form-status")
-
-if (form) {
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault() // stop page redirect
-    const data = new FormData(form)
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      })
-
-      if (response.ok) {
-        status.textContent = "Message Sent! Thank you."
-        form.reset()
-      } else {
-        status.textContent = "Oops! Something went wrong."
-      }
-    } catch (error) {
-      status.textContent = " Network error. Try again later."
-    }
-  })
 }

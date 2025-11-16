@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "../images/project3.jpeg",
       "../images/Render1.jpg",
       "../images/rr2.jpeg",
-      "../images/Bajaj.jpg"
+      "../images/Bajaj.jpg",
+      "../images/bhVilla.png"
     ]
 
     images.forEach((src) => {

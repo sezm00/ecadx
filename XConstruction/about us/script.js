@@ -1,3 +1,17 @@
+preloadImages();
+function preloadImages() {
+  const images = [
+   "../images/1987.png",
+   "../images/2005.png",
+   "../images/2010s.png",
+   "../images/2025.png",
+   "../images/Asset 90@300x.png"
+  ]
+  images.forEach((image) => {
+    const img = new Image();
+    img.src = image;
+  });
+}
 document.addEventListener("DOMContentLoaded", () => {
   // Header scroll effect
   const header = document.querySelector(".header");
