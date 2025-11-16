@@ -430,6 +430,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .header { 
     position: fixed; /* Keep fixed for scroll behavior to work */
     padding: 12px 0; 
@@ -494,10 +495,11 @@ body {
   .footer-links-left, .footer-links-right { justify-content: center; margin: 15px 0; }
   .footer-links-left a, .footer-links-right a { margin: 0 15px; }
   .footer-social { margin-bottom: 20px; }
-  .timeline-advanced { padding-top: 100px; } /* Add padding for fixed header */
+  .timeline-advanced { padding-top: 120px; } /* Add padding for fixed header */
 }
 
 @media (max-width: 480px) {
+  .timeline-advanced { padding-top: 120px; }
   .milestone-logo { width: 90px; height: 58px; }
   .footer-links-left, .footer-links-right { flex-direction: column; align-items: center; }
   .footer-links-left a, .footer-links-right a { margin: 10px 0; }

@@ -129,21 +129,4 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("click", e => {
     if (e.target === modal) modal.style.display = "none";
   });
-
-  // ================================================
-  // DYNAMIC PADDING FIX – Prevents header overlap
-  // ================================================
-  function adjustSectionPadding() {
-      const header = document.querySelector('.header');
-      const section = document.querySelector('.projects-section');
-      if (!header || !section) return;
-
-      const headerHeight = header.offsetHeight;
-      const extraBuffer = window.innerWidth <= 768 ? 60 : 40;
-      section.style.paddingTop = `${headerHeight + extraBuffer}px`;
-  }
-
-  // Run after full load and on resize/orientation change
-  window.addEventListener('load', adjustSectionPadding);
-  window.addEventListener('resize', adjustSectionPadding);
 });
