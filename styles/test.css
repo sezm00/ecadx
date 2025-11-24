@@ -1,509 +1,412 @@
 /* Base Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    height: 100%;
-    
-  }
-  
-  body {
-    background-color: #000;
-    color: #fff;
-    font-family: 'IBM Plex Sans', sans-serif;
-    line-height: 1.6;
-  }
-  
-  /* Layout */
-  .parent-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100%;
-    position: relative;
-    width: 100%;
-  }
-  
-  .svg-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    width: 100%;
-    max-width: 1105px;
-    height: 100%;
-  }
-  
-  .svg-container svg {
-    width: 100%;
-    height: auto;
-    max-width: 1105px;
-  }
-  
-  /* Ensure SVG background scales with content */
-  @media (max-width: 768px) {
-    .svg-container {
-      min-width: 900px;
-    }
-    
-    .svg-container svg {
-      min-width: 900px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .svg-container {
-      min-width: 800px;
-    }
-    
-    .svg-container svg {
-      min-width: 800px;
-    }
-  }
-  
-  @media (max-width: 360px) {
-    .svg-container {
-      min-width: 700px;
-    }
-    
-    .svg-container svg {
-      min-width: 700px;
-    }
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "IBM Plex Sans", sans-serif;
+  line-height: 1.6;
+}
+
+/* Layout */
+.parent-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.svg-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 100%;
+  max-width: 1105px;
+  height: 100%;
+}
+
+.svg-container svg {
+  width: 100%;
+  height: auto;
+  max-width: 1105px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  z-index: 1;
+  margin-top: 14rem;
+  /* Increased top margin from 9.5rem to 11rem to move content down */
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 11rem;
+  padding-left: 5rem;
+  text-align: center;
+}
+
+.img-logo img {
+  width: 25vw;
+  height: auto;
+  max-width: 300px;
+}
+
+#scale-img img {
+  width: 22vw;
+  height: auto;
+  max-width: 264px;
+}
+
+/* Content Sections */
+.items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  width: 100%;
+}
+
+.content-container,
+.content-container-reverse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.content-container {
+  gap: 23rem;
+  padding-right: 0rem;
+}
+
+.content-container-reverse {
+  flex-direction: row-reverse;
+  gap: 22.5rem;
+  padding-left: 10rem;
+}
+
+.intro-text-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.intro-text-container p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 500px;
+}
+
+.logo-container img {
+  width: 13vw;
+  height: auto;
+  max-width: 156px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.logo-container img:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+  background-color: #333333;
+  font-size: 1rem;
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12.5rem;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+
+/* Large Desktop Adjustments */
+@media (max-width: 1200px) {
   .main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 2rem;
-    z-index: 1;
-    margin-top: 9.5rem;
+    max-width: 100%;
+    padding: 1.5rem;
+    margin-top: 10.5rem;
+    /* Adjusted top margin for large desktop */
   }
-  
-  /* Header */
-  .header-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 11rem;
-    padding-left: 5rem;
-    text-align: center;
-  }
-  
-  .img-logo img {
-    width: 25vw;
-    height: auto;
-  }
-  
-  #scale-img img {
-    width: 22vw;
-    height: auto;
-  }
-  
-  /* Content Sections */
-  .items-container {
-    display: flex;
-    flex-direction: column;
-    gap: 7rem;
-    width: 100%;
-  }
-  
-  .content-container,
-  .content-container-reverse {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
+
   .content-container {
-    gap: 23rem;
-    padding-right: 0rem;
+    gap: 18rem;
   }
-  
+
   .content-container-reverse {
-    flex-direction: row-reverse;
-    gap: 22.5rem;
-    padding-left: 10rem;
+    gap: 17rem;
+    padding-left: 8rem;
   }
-  
+
+  .header-container {
+    gap: 9rem;
+    padding-left: 4rem;
+  }
+
+  .items-container {
+    gap: 6rem;
+  }
+}
+
+/* Tablet Adjustments */
+@media (max-width: 992px) {
+  .main-content {
+    padding: 1.2rem;
+    margin-top: 8.5rem;
+    /* Adjusted top margin for tablet */
+  }
+
+  .content-container {
+    gap: 15rem;
+  }
+
+  .content-container-reverse {
+    gap: 14rem;
+    padding-left: 6rem;
+  }
+
+  .header-container {
+    gap: 7rem;
+    padding-left: 3rem;
+  }
+
+  .items-container {
+    gap: 5rem;
+  }
+
   .intro-text-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
+    font-size: 2.2rem;
   }
-  
+
   .intro-text-container p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-    max-width: 500px;
+    font-size: 1.05rem;
   }
-  
-  
-  
+}
+
+/* Small Tablet & Large Phone - Keep Desktop Layout */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem 0.75rem;
+    margin-top: 3.5rem;
+    /* Adjusted top margin for mobile to move content down */
+  }
+
+  .svg-container {
+    max-width: 95%;
+  }
+
+  .header-container {
+    gap: 2.5rem;
+    padding-left: 0.75rem;
+    flex-wrap: nowrap;
+  }
+
+  .content-container {
+    gap: 5rem;
+    padding-right: 0.75rem;
+    flex-wrap: nowrap;
+  }
+
+  .content-container-reverse {
+    gap: 5rem;
+    padding-left: 1.5rem;
+    flex-wrap: nowrap;
+  }
+
+  .items-container {
+    gap: 3rem;
+  }
+
+  .intro-text-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .intro-text-container p {
+    font-size: 0.8rem;
+    max-width: 350px;
+    line-height: 1.4;
+  }
+
   .logo-container img {
-    width: 13vw;
-    height: auto;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 16vw;
+    max-width: 100px;
+    min-width: 85px;
   }
-  
-  .logo-container img:hover {
-    transform: scale(1.1);
-    background-color: rgba(255, 255, 255, 0.1);
+
+  .img-logo img {
+    width: 28vw;
+    max-width: 170px;
+    min-width: 140px;
   }
-  
+
+  #scale-img img {
+    width: 25vw;
+    max-width: 150px;
+    min-width: 120px;
+  }
+}
+
+/* Mobile Phone Adjustments */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0.75rem 0.5rem;
+    margin-top: 2rem;
+    /* Adjusted top margin for mobile phones */
+  }
+
+  .header-container {
+    gap: 1.75rem;
+    padding-left: 0.5rem;
+  }
+
+  .content-container {
+    gap: 3.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .content-container-reverse {
+    gap: 3.5rem;
+    padding-left: 1rem;
+  }
+
+  .items-container {
+    gap: 2.5rem;
+  }
+
+  .intro-text-container h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .intro-text-container p {
+    font-size: 0.75rem;
+    line-height: 1.3;
+    max-width: 280px;
+  }
+
+  .logo-container img {
+    width: 20vw;
+    max-width: 85px;
+    min-width: 70px;
+  }
+
+  .img-logo img {
+    width: 34vw;
+    max-width: 140px;
+    min-width: 115px;
+  }
+
+  #scale-img img {
+    width: 30vw;
+    max-width: 120px;
+    min-width: 95px;
+  }
+
   .footer-container {
-    background-color: #333333;
-    font-size: 1rem;
-    width: 100%;
-    height: 4rem;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10rem;
+    margin-top: 4rem;
+    font-size: 0.8rem;
+    height: 3rem;
   }
-  
-  /* Animations */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Very Small Screens */
+@media (max-width: 360px) {
+  .main-content {
+    padding: 0.5rem 0.25rem;
+    margin-top: 2rem;
+    /* Adjusted top margin for very small screens */
   }
-  
-  .fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
+
+  .header-container {
+    gap: 1.25rem;
+    padding-left: 0.25rem;
   }
-  
-  /* Responsive Design */
-  
-  /* Large Desktop Adjustments */
-  @media (max-width: 1200px) {
-    .main-content {
-      max-width: 100%;
-      padding: 1.5rem;
-    }
-    
-    .content-container {
-      gap: 18rem;
-    }
-    
-    .content-container-reverse {
-      gap: 17rem;
-      padding-left: 8rem;
-    }
-    
-    .header-container {
-      gap: 9rem;
-      padding-left: 4rem;
-    }
-    
-    .items-container {
-      gap: 6rem;
-    }
+
+  .content-container {
+    gap: 2.5rem;
+    padding-right: 0.25rem;
   }
-  
-  /* Tablet Adjustments */
-  @media (max-width: 992px) {
-    .main-content {
-      padding: 1.2rem;
-      margin-top: 7rem;
-    }
-    
-    .content-container {
-      gap: 15rem;
-    }
-    
-    .content-container-reverse {
-      gap: 14rem;
-      padding-left: 6rem;
-    }
-    
-    .header-container {
-      gap: 7rem;
-      padding-left: 3rem;
-    }
-    
-    .items-container {
-      gap: 5rem;
-    }
-    
-    .intro-text-container h1 {
-      font-size: 2.2rem;
-    }
-    
-    .intro-text-container p {
-      font-size: 1.05rem;
-    }
+
+  .content-container-reverse {
+    gap: 2.5rem;
+    padding-left: 0.75rem;
   }
-  
-  /* Small Tablet & Large Phone Adjustments */
-  @media (max-width: 768px) {
-    .main-content {
-      padding: 1rem;
-      margin-top: 5rem;
-      overflow-x: auto;
-      min-width: 900px;
-      width: 100%;
-    }
-    
-    .parent-container {
-      overflow-x: auto;
-      width: 100%;
-    }
-    
-    .header-container {
-      gap: 6rem;
-      padding-left: 3rem;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      min-width: 900px;
-      width: 100%;
-      display: flex;
-    }
-    
-    .content-container,
-    .content-container-reverse {
-      gap: 12rem;
-      padding-left: 3rem;
-      padding-right: 3rem;
-      min-width: 900px;
-      flex-wrap: nowrap;
-      align-items: center;
-      display: flex;
-      width: 100%;
-    }
-    
-    .content-container-reverse {
-      padding-left: 3rem;
-      flex-direction: row-reverse;
-    }
-    
-    .items-container {
-      gap: 5rem;
-      min-width: 900px;
-      width: 100%;
-    }
-    
-    .intro-text-container {
-      flex: 1;
-      min-width: 300px;
-      max-width: 400px;
-      flex-shrink: 0;
-    }
-    
-    .intro-text-container h1 {
-      font-size: 2.2rem;
-      margin-bottom: 1.2rem;
-    }
-    
-    .intro-text-container p {
-      font-size: 1.1rem;
-      max-width: 380px;
-      line-height: 1.7;
-    }
-    
-    .logo-container {
-      flex: 0 0 auto;
-      min-width: 150px;
-      max-width: 200px;
-      flex-shrink: 0;
-    }
-    
-    .logo-container img {
-      width: 12vw;
-      min-width: 120px;
-      max-width: 180px;
-    }
-    
-    .img-logo img {
-      width: 22vw;
-      min-width: 140px;
-      max-width: 220px;
-    }
-    
-    #scale-img img {
-      width: 20vw;
-      min-width: 120px;
-      max-width: 200px;
-    }
+
+  .items-container {
+    gap: 2rem;
   }
-  
-  /* Small Phone Adjustments */
-  @media (max-width: 480px) {
-    .main-content {
-      padding: 0.8rem;
-      margin-top: 4rem;
-      min-width: 800px;
-      width: 100%;
-    }
-    
-    .header-container {
-      gap: 4rem;
-      padding-left: 2rem;
-      min-width: 800px;
-      width: 100%;
-      display: flex;
-      flex-wrap: nowrap;
-    }
-    
-    .content-container,
-    .content-container-reverse {
-      gap: 8rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
-      min-width: 800px;
-      align-items: center;
-      display: flex;
-      width: 100%;
-      flex-wrap: nowrap;
-    }
-    
-    .content-container-reverse {
-      flex-direction: row-reverse;
-    }
-    
-    .items-container {
-      gap: 4rem;
-      min-width: 800px;
-      width: 100%;
-    }
-    
-    .intro-text-container {
-      min-width: 250px;
-      max-width: 350px;
-      flex-shrink: 0;
-    }
-    
-    .intro-text-container h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    
-    .intro-text-container p {
-      font-size: 1rem;
-      max-width: 320px;
-      line-height: 1.6;
-    }
-    
-    .logo-container {
-      min-width: 120px;
-      max-width: 160px;
-      flex-shrink: 0;
-    }
-    
-    .logo-container img {
-      width: 10vw;
-      min-width: 100px;
-      max-width: 140px;
-    }
-    
-    .img-logo img {
-      width: 18vw;
-      min-width: 120px;
-      max-width: 180px;
-    }
-    
-    #scale-img img {
-      width: 16vw;
-      min-width: 100px;
-      max-width: 160px;
-    }
-    
-    .footer-container {
-      margin-top: 6rem;
-      font-size: 0.9rem;
-    }
+
+  .intro-text-container h1 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
   }
-  
-  /* Very Small Screens - Enable Horizontal Scroll */
-  @media (max-width: 360px) {
-    .main-content {
-      padding: 0.5rem;
-      margin-top: 3rem;
-      min-width: 700px;
-      width: 100%;
-    }
-    
-    .header-container {
-      gap: 3rem;
-      padding-left: 1.5rem;
-      min-width: 700px;
-      width: 100%;
-      display: flex;
-      flex-wrap: nowrap;
-    }
-    
-    .content-container,
-    .content-container-reverse {
-      gap: 6rem;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-      min-width: 700px;
-      align-items: center;
-      display: flex;
-      width: 100%;
-      flex-wrap: nowrap;
-    }
-    
-    .content-container-reverse {
-      flex-direction: row-reverse;
-    }
-    
-    .items-container {
-      gap: 3rem;
-      min-width: 700px;
-      width: 100%;
-    }
-    
-    .intro-text-container {
-      min-width: 200px;
-      max-width: 300px;
-      flex-shrink: 0;
-    }
-    
-    .intro-text-container h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.8rem;
-    }
-    
-    .intro-text-container p {
-      font-size: 0.95rem;
-      max-width: 280px;
-      line-height: 1.5;
-    }
-    
-    .logo-container {
-      min-width: 100px;
-      max-width: 140px;
-      flex-shrink: 0;
-    }
-    
-    .logo-container img {
-      width: 8vw;
-      min-width: 80px;
-      max-width: 120px;
-    }
-    
-    .img-logo img {
-      width: 16vw;
-      min-width: 100px;
-      max-width: 160px;
-    }
-    
-    #scale-img img {
-      width: 14vw;
-      min-width: 90px;
-      max-width: 140px;
-    }
+
+  .intro-text-container p {
+    font-size: 0.7rem;
+    line-height: 1.3;
+    max-width: 230px;
   }
+
+  .logo-container img {
+    width: 22vw;
+    max-width: 75px;
+    min-width: 60px;
+  }
+
+  .img-logo img {
+    width: 38vw;
+    max-width: 120px;
+    min-width: 95px;
+  }
+
+  #scale-img img {
+    width: 34vw;
+    max-width: 100px;
+    min-width: 80px;
+  }
+
+  .footer-container {
+    margin-top: 3rem;
+    font-size: 0.75rem;
+    height: 2.5rem;
+  }
+}
