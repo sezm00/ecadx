@@ -139,16 +139,28 @@ body {
 }
 
 /* Mobile menu icon animation (hamburger -> X) */
-.mobile-menu-toggle.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-.mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
-.mobile-menu-toggle.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
 
 /* Ensure bars are white */
-.mobile-menu-toggle span { background-color: #fff; }
+.mobile-menu-toggle span {
+    background-color: #fff;
+}
 
 /* Ensure nav overlay is above content */
 @media (max-width: 768px) {
-    .main-nav { z-index: 9999; }
+    .main-nav {
+        z-index: 9999;
+    }
 }
 
 /* Contact Section */
@@ -193,7 +205,7 @@ body {
     flex: 1;
     padding: 40px;
     background: #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     border-radius: 50px;
     display: flex;
     flex-direction: column;
@@ -262,7 +274,7 @@ body {
 .btn-submit:hover {
     background-color: var(--secondary-color);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Contact Cards on RIGHT */
@@ -373,6 +385,7 @@ body {
     text-decoration: none;
     font-weight: inherit;
 }
+
 .contact-card a:hover,
 .contact-card a:focus {
     color: inherit;
@@ -447,12 +460,14 @@ body {
     margin-bottom: 40px;
 }
 
-.footer-links-left, .footer-links-right {
+.footer-links-left,
+.footer-links-right {
     display: flex;
     list-style: none;
 }
 
-.footer-links-left a, .footer-links-right a {
+.footer-links-left a,
+.footer-links-right a {
     color: var(--link-color);
     text-decoration: none;
     font-size: 14px;
@@ -466,7 +481,8 @@ body {
     margin-left: 30px;
 }
 
-.footer-links-left a:hover, .footer-links-right a:hover {
+.footer-links-left a:hover,
+.footer-links-right a:hover {
     color: var(--secondary-color);
 }
 
@@ -503,7 +519,7 @@ body {
     .contact-cards {
         justify-content: center;
     }
-    
+
     .contact-card {
         max-width: 100%;
     }
@@ -511,12 +527,14 @@ body {
 
 @media (max-width: 768px) {
     .header {
-        position: fixed; /* Keep fixed for scroll behavior to work */
+        position: fixed;
+        /* Keep fixed for scroll behavior to work */
         padding: 12px 0;
     }
-    
+
     .contact-section {
-        padding-top: 100px; /* Add padding for fixed header */
+        padding-top: 100px;
+        /* Add padding for fixed header */
     }
 
     .main-nav {
@@ -574,19 +592,19 @@ body {
         z-index: 10000;
     }
 
-    .contact-section { 
-        padding-top: 120px; 
+    .contact-section {
+        padding-top: 120px;
     }
-    
+
     .contact-content {
         flex-direction: column;
     }
-    
+
     .contact-cards {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    
+
     .contact-card {
         flex: 1 1 calc(50% - 15px);
         min-width: 250px;
@@ -598,24 +616,24 @@ body {
         padding: 20px;
         flex: 1 1 100%;
     }
-    
+
     .contact-icon {
         width: 60px;
         height: 60px;
     }
-    
+
     .map-container {
         height: 300px;
     }
-    
+
     .map-container iframe {
         height: 300px;
     }
-    
+
     .form-row {
         flex-direction: column;
     }
-    
+
     .contact-cards {
         flex-direction: column;
     }
