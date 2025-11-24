@@ -1,93 +1,147 @@
-# ECADX - Innovative Solutions Platform
+# ECADX - Multi-Brand Solutions Platform
 
-ECADX is a comprehensive web platform offering innovative solutions across multiple industries including construction, education, finance, and media.
+ECADX is a comprehensive web platform offering innovative solutions across multiple industries through four distinct brands: **XConstruction**, **XAcademy**, **XFinance**, and **XStudios**.
 
 ## 🏗️ Project Overview
 
-This platform serves as a multi-service business website with dedicated sections for different business verticals. The project includes both production-ready pages and test/development versions for ongoing development.
+This platform serves as a multi-brand business ecosystem with dedicated sections for construction, education, finance, and media services. Each brand operates as a complete sub-platform with its own pages, styling, and functionality.
 
 ## 📁 Project Structure
 
 ```
 ecadx/
 ├── index.html                 # Main landing page
-├── home/                      # Home page components
-├── about us/                  # About us section
-├── contact us/                # Contact information and forms
-├── Services/                  # Services offered
-├── Projects/                  # Project portfolio
-├── images/                    # Main image assets
-├── img/                       # Additional image assets
-├── styles/                    # CSS stylesheets
-├── shared-footer.css          # Shared footer styles
-├── shared-footer.js           # Shared footer functionality
-├── image-manager.html         # Image management tool
-├── README-Image-Management.md # Image management documentation
-├── test.html                  # Test/development version
-├── xacademy_test.html         # XAcademy test version
-└── xfinance_test.html         # XFinance test version
+├── .gitignore                 # Git ignore configuration
+├── img/                       # Shared image assets
+├── styles/                    # Shared CSS stylesheets
+│   ├── main.css              # Main stylesheet
+│   └── ...
+│
+├── XConstruction/             # Construction services brand
+│   ├── home/                 # Construction home page
+│   ├── about us/             # About XConstruction
+│   ├── contact us/           # Contact information
+│   ├── Services/             # Construction services
+│   ├── Projects/             # Project portfolio
+│   ├── images/               # Construction-specific images
+│   ├── shared-footer.css     # Shared footer styles
+│   ├── shared-footer.js      # Shared footer functionality
+│   ├── shared-header.css     # Shared header styles
+│   ├── shared-header.js      # Shared header functionality
+│   ├── script.js             # Main JavaScript
+│   └── image-manager.html    # Image management tool
+│
+├── XAcademy/                  # Education services brand
+│   ├── home/                 # Academy home page
+│   ├── about/                # About XAcademy
+│   ├── programs/             # Educational programs
+│   └── kidsbay/              # Kids education section
+│
+├── XFinance/                  # Finance services brand
+│   └── xfinance_test.html    # Finance platform (in development)
+│
+└── XStudios/                  # Media & creative services brand
+    ├── xstudios_test.html    # Studios platform (in development)
+    ├── test_xstudios.css     # Test styles
+    └── humburger_navbar.js   # Navigation component
 ```
 
-## 🚀 Features
+## 🚀 Brand Divisions
 
-- **Multi-Service Platform**: Covers construction, education, finance, and media
-- **Responsive Design**: Mobile-first approach with modern UI/UX
-- **Modular Architecture**: Separate sections for different business areas
-- **Image Management**: Built-in image management system
-- **Test Environment**: Multiple test versions for development
+### 🏗️ XConstruction
+Complete construction services platform with:
+- Professional home page
+- About us section
+- Contact forms and information
+- Services showcase
+- Projects portfolio
+- Custom image management system
+- Shared header/footer components
+
+### 🎓 XAcademy
+Educational platform featuring:
+- Academy home page
+- About section
+- Educational programs
+- KidsBay - specialized children's education section
+
+### 💰 XFinance
+Finance services platform (in development):
+- Financial solutions and services
+- Currently in test/development phase
+
+### 🎬 XStudios
+Media and creative services platform (in development):
+- Media production services
+- Currently in test/development phase
 
 ## 🛠️ Technologies Used
 
-- HTML5
-- CSS3 (with modern features like CSS Grid and Flexbox)
-- Vanilla JavaScript
-- Responsive design principles
-- SVG graphics and animations
-
-## 📱 Pages & Sections
-
-### Production Pages
-- **Main Landing Page** (`index.html`) - Company overview and navigation
-- **Home** (`home/`) - Detailed home page content
-- **About Us** (`about us/`) - Company information and team
-- **Contact Us** (`contact us/`) - Contact forms and information
-- **Services** (`Services/`) - Service offerings
-- **Projects** (`Projects/`) - Portfolio and case studies
-
-### Test/Development Pages
-- **Test Version** (`test.html`) - Development testing
-- **XAcademy Test** (`xacademy_test.html`) - Education service testing
-- **XFinance Test** (`xfinance_test.html`) - Finance service testing
+- **HTML5** - Semantic markup and structure
+- **CSS3** - Modern styling with Grid and Flexbox
+- **Vanilla JavaScript** - Interactive functionality
+- **Responsive Design** - Mobile-first approach
+- **SVG Graphics** - Scalable icons and animations
+- **Modular Architecture** - Component-based structure
 
 ## 🎨 Design System
 
-The platform uses a consistent color scheme and design language:
-- Primary colors: Blue (#27C0F2), Yellow (#F2E527), Purple (#560084)
-- Modern typography with IBM Plex Sans and other web fonts
-- Responsive grid layouts
-- Interactive SVG backgrounds and animations
+Each brand maintains a consistent design language while having its own identity:
+- **Shared Components**: Headers, footers, navigation
+- **Brand-Specific Styling**: Custom colors and themes per division
+- **Responsive Layouts**: Optimized for all device sizes
+- **Modern Typography**: Professional web fonts
+- **Interactive Elements**: Smooth animations and transitions
 
 ## 📸 Image Management
 
-The project includes a comprehensive image management system:
-- Organized image directories (`images/` and `img/`)
-- Image management tool (`image-manager.html`)
-- Support for various image formats (JPG, PNG, JPEG)
-- Optimized image sizes for web performance
+XConstruction includes a built-in image management system:
+- Dedicated image directories per brand
+- Image management tool (`XConstruction/image-manager.html`)
+- Support for multiple formats (JPG, PNG, JPEG)
+- Optimized for web performance
 
 ## 🚀 Getting Started
 
+### For Production
 1. Clone the repository
 2. Open `index.html` in your web browser
-3. Navigate through different sections
-4. Use test files for development and testing
+3. Navigate to different brand sections
 
-## 🔧 Development
+### For Development
+1. Navigate to individual brand directories
+2. Each brand has its own test files
+3. Use brand-specific stylesheets and scripts
 
-- Test files are maintained for ongoing development
-- Shared components (footer, styles) are centralized
-- Modular CSS structure for maintainability
-- Responsive design for all device sizes
+## 🔧 Development Guidelines
+
+- **Modular Structure**: Each brand is self-contained
+- **Shared Components**: Use shared header/footer where applicable
+- **Consistent Naming**: Follow established conventions
+- **Responsive First**: Test on multiple device sizes
+- **Code Organization**: Keep brand assets in respective directories
+
+## 📂 File Organization
+
+### XConstruction (Most Developed)
+- ✅ Complete home, about, contact, services, and projects pages
+- ✅ Shared components (header/footer)
+- ✅ Image management system
+- ✅ Production-ready
+
+### XAcademy (In Development)
+- ✅ Home and about pages
+- ✅ Programs section
+- ✅ KidsBay children's section
+- 🚧 Ongoing development
+
+### XFinance (Early Development)
+- 🚧 Test version available
+- 🚧 Core features in development
+
+### XStudios (Early Development)
+- 🚧 Test version available
+- 🚧 Core features in development
 
 ## 📄 License
 
@@ -95,8 +149,15 @@ This project is proprietary software for ECADX business operations.
 
 ## 🤝 Contributing
 
-For internal development and updates, please follow the established project structure and maintain consistency across all sections.
+For internal development and updates:
+1. Maintain the established file structure
+2. Follow brand-specific guidelines
+3. Ensure consistency across all sections
+4. Test responsive design thoroughly
+5. Document any new components or features
 
 ---
 
-**ECADX Team** - Building innovative solutions for tomorrow's challenges.
+**ECADX Team** - Building innovative solutions across construction, education, finance, and media.
+
+*Last Updated: November 2025*
